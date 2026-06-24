@@ -1,0 +1,42 @@
+{
+  "verdict": {
+    "confidence": "moderate",
+    "summary": "One paragraph stating what is launch-ready, what is blocked, and what should happen next."
+  },
+  "buyerSafeListing": {
+    "title": "",
+    "oneLinePromise": "",
+    "buyerJob": "",
+    "input": "",
+    "output": "",
+    "priceNote": "",
+    "exclusions": []
+  },
+  "claimEvidenceMatrix": [
+    {
+      "claim": "",
+      "evidence": "",
+      "status": "supported",
+      "fix": ""
+    }
+  ],
+  "blockedClaims": [],
+  "firstCallAndPaymentRisks": [
+    {
+      "item": "Invalid input fails before payment",
+      "status": "unknown",
+      "severity": "P1",
+      "fix": ""
+    }
+  ],
+  "metadataFixes": [],
+  "nextTest": {
+    "action": "",
+    "successEvidence": "",
+    "stopCondition": ""
+  },
+  "buyerMessage": {
+    "subject": "",
+    "body": ""
+  }
+}

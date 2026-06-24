@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stoa x402/MCP Launch Review"
+  short_description: "Create source-grounded x402 and MCP launch review packets."
+  default_prompt: "Review this public x402, MCP, paid API, or agent-tool launch material and produce a buyer-safe listing, evidence matrix, blocked claims, first-call risks, and next test."

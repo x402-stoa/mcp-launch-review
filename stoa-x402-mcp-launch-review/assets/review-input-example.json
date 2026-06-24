@@ -1,0 +1,26 @@
+{
+  "productName": "Example MCP Data Tool",
+  "publicSourceUrl": "https://example.com/docs",
+  "sourceText": "Paste public README, docs, route description, listing draft, or endpoint contract here.",
+  "buyer": "MCP or x402 builder evaluating a paid launch",
+  "intendedPaidAction": "Agent pays for one API call or installs one tool",
+  "price": "$0.01 per call or $19 fixed review",
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/v0/example-query",
+      "network": "eip155:8453",
+      "amountAtomic": "10000"
+    }
+  ],
+  "knownEvidence": [
+    "Public docs exist",
+    "No-pay 402 discovery tested",
+    "Self-paid canary settled"
+  ],
+  "knownNonClaims": [
+    "No buyer demand observed",
+    "No external revenue observed",
+    "No production readiness claim"
+  ]
+}

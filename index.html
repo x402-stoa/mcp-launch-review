@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stoa x402/MCP Launch Review</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #14211a;
+        --muted: #51635b;
+        --line: #d8e1dc;
+        --paper: #f6f8f7;
+        --panel: #ffffff;
+        --green: #245b4a;
+        --red: #8c2f39;
+        --blue: #264f7d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: var(--blue);
+      }
+
+      .hero {
+        min-height: 76vh;
+        display: flex;
+        align-items: end;
+        background:
+          linear-gradient(rgba(9, 19, 14, 0.12), rgba(9, 19, 14, 0.72)),
+          url("stoa-x402-mcp-launch-review/assets/stoa-x-header-v2.png") center / cover no-repeat;
+        color: #fff;
+      }
+
+      .hero-inner,
+      .section-inner {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero-inner {
+        padding: 0 0 42px;
+      }
+
+      h1 {
+        max-width: 880px;
+        margin: 0 0 14px;
+        font-size: clamp(34px, 7vw, 76px);
+        line-height: 0.96;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 0 0 22px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 19px;
+        line-height: 1.45;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+        padding: 0 14px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button.primary {
+        border-color: #fff;
+        background: #fff;
+        color: #14211a;
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 28px;
+      }
+
+      p,
+      li {
+        line-height: 1.55;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+      }
+
+      .card {
+        min-height: 160px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 16px;
+      }
+
+      .card strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .strip {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+      }
+
+      th,
+      td {
+        border-top: 1px solid var(--line);
+        padding: 11px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        width: 30%;
+      }
+
+      code {
+        overflow-wrap: anywhere;
+        border-radius: 4px;
+        background: #edf2ee;
+        padding: 1px 4px;
+      }
+
+      .pill {
+        display: inline-flex;
+        margin: 0 6px 8px 0;
+        border-radius: 999px;
+        background: #eaf1ed;
+        padding: 6px 10px;
+        color: #1f493d;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .warn {
+        color: var(--red);
+        font-weight: 700;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          min-height: 72vh;
+        }
+
+        .lead {
+          font-size: 17px;
+        }
+
+        th,
+        td {
+          display: block;
+          width: 100%;
+        }
+
+        th {
+          padding-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>Stoa x402/MCP Launch Review</h1>
+        <p class="lead">A source-grounded agent skill for paid API, MCP, x402, and agent-tool builders who need safer launch claims, cleaner listings, and a sharper first-call/payment test.</p>
+        <div class="actions">
+          <a class="button primary" href="stoa-x402-mcp-launch-review/SKILL.md">Download SKILL.md</a>
+          <a class="button" href="stoa-x402-mcp-launch-review/assets/review-output-template.json">View output template</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-inner">
+        <h2>What It Does</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>Buyer-safe listing copy</strong>
+            <p>Rewrite the launch promise around source-backed value, clear inputs, clear outputs, price notes, and exclusions.</p>
+          </div>
+          <div class="card">
+            <strong>Claim/evidence matrix</strong>
+            <p>Separate supported, weak, unsupported, and blocked claims before they reach a marketplace, README, or buyer.</p>
+          </div>
+          <div class="card">
+            <strong>First-call risk check</strong>
+            <p>Check schemas, examples, auth, destructive action labels, no-charge errors, idempotency, caps, and buyer instructions.</p>
+          </div>
+          <div class="card">
+            <strong>x402/MCP metadata fixes</strong>
+            <p>Flag missing route/resource binding, query/body discoverability, output contracts, payment metadata, and MCP setup clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="section-inner">
+        <h2>Input And Output</h2>
+        <table>
+          <tr>
+            <th>Input</th>
+            <td>Public README, docs page, endpoint description, MCP listing, x402 route, pricing note, or marketplace draft.</td>
+          </tr>
+          <tr>
+            <th>Output</th>
+            <td>Verdict, buyer-safe listing, claim/evidence matrix, blocked claims, first-call/payment risks, metadata fixes, next test, and optional buyer message.</td>
+          </tr>
+          <tr>
+            <th>Price test</th>
+            <td>$19 fixed review or marketplace skill price when a seller account exists.</td>
+          </tr>
+          <tr>
+            <th>Not included</th>
+            <td>No legal, compliance, security certification, production endorsement, private-source review, wallet funding, or account setup.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Proof Status</h2>
+        <p class="muted">Stoa has self-paid Base mainnet mechanics evidence for its Source Commercial Risk x402 product, including a settled query-route buyer-client canary. That proves the rail can work for Stoa's own product test. It does not prove external demand.</p>
+        <span class="pill">self-paid mechanics proof</span>
+        <span class="pill">query-route canary settled</span>
+        <span class="pill">public-source-only review</span>
+        <p class="warn">No buyer demand, external revenue, durable Bazaar ranking, production readiness, legal/compliance approval, or security certification is claimed.</p>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="section-inner">
+        <h2>Use The Skill</h2>
+        <table>
+          <tr>
+            <th>Skill file</th>
+            <td><code>stoa-x402-mcp-launch-review/SKILL.md</code></td>
+          </tr>
+          <tr>
+            <th>Rubric</th>
+            <td><code>stoa-x402-mcp-launch-review/references/review-rubric.md</code></td>
+          </tr>
+          <tr>
+            <th>Example input</th>
+            <td><code>stoa-x402-mcp-launch-review/assets/review-input-example.json</code></td>
+          </tr>
+          <tr>
+            <th>Output template</th>
+            <td><code>stoa-x402-mcp-launch-review/assets/review-output-template.json</code></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
