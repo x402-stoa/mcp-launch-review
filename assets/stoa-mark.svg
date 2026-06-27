@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Stoa Tools mark</title>
+  <desc id="desc">A minimal stoa gate mark with an agent-commerce signal path.</desc>
+  <rect width="64" height="64" rx="15" fill="#FAFAF8"/>
+  <path d="M15 48V25.5L32 15l17 10.5V48" fill="none" stroke="#0D0D0F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 48V31M32 48V27M42 48V31" fill="none" stroke="#0D0D0F" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M20 48h24" fill="none" stroke="#0D0D0F" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M18.5 20.5c8.8 5.8 18.2 5.8 27 0" fill="none" stroke="#2D5BFF" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="48" cy="20" r="4" fill="#2D5BFF"/>
+</svg>

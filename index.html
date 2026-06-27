@@ -17,6 +17,7 @@
     <meta property="og:image" content="https://stoa.tools/stoa-x402-mcp-launch-review/assets/stoa-x-header-v2.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="sitemap" type="application/xml" href="https://stoa.tools/sitemap.xml">
+    <link rel="icon" type="image/svg+xml" href="assets/stoa-mark.svg">
     <link rel="alternate" type="text/plain" href="https://stoa.tools/llms.txt" title="LLMs text">
     <link rel="alternate" type="application/json" href="https://stoa.tools/offers.json" title="Stoa offers">
     <script type="application/ld+json">
@@ -179,22 +180,16 @@
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         color: var(--ink);
         text-decoration: none;
         font-weight: 800;
       }
 
       .brand-mark {
-        width: 28px;
-        height: 28px;
-        border-radius: 8px;
-        background: var(--ink);
-        display: grid;
-        place-items: center;
-        color: var(--chalk);
-        font-size: 15px;
-        line-height: 1;
+        width: 34px;
+        height: 34px;
+        display: block;
       }
 
       .nav-links {
@@ -655,7 +650,7 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <div class="nav-inner">
         <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">S</span>
+          <img class="brand-mark" src="assets/stoa-mark.svg" alt="" aria-hidden="true">
           <span>Stoa Tools</span>
         </a>
         <div class="nav-links">
