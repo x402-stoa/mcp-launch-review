@@ -1,0 +1,28 @@
+# Stoa Tools
+
+> Stoa builds trust and launch-readiness tools for agent commerce: MCP listing validation, x402 payment-evidence checking, source-grounded claim review, and agent-payment failure diagnosis.
+
+Canonical site: https://stoa.tools/
+Contact: learnstoa@gmail.com
+
+## Core Pages
+
+- [Stoa Launch Gate](https://stoa.tools/): paid validation for MCP servers, x402 paid APIs, and agent-tool launches before listing, charging, or routing buyer agents.
+- [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing validation and x402 payment-evidence checking.
+- [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.
+
+## Current Offers
+
+- MCP Listing Validator Report: $49 applied report for listing readiness, buyer-safe claims, and directory submission issues.
+- x402 Payment Evidence Checker: $149 applied report separating real external payment evidence from self-pay mechanics, failed discovery, missing output, and unsafe logs.
+- Launch Review and Listing Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
+
+## Agent-Readable Boundaries
+
+- Public code and examples are proof/self-check artifacts, not a production hosted API.
+- Paid work requires scoped buyer input and confirmation before any payment destination, checkout link, invoice, wallet address, or live x402 route is sent.
+- Stoa does not claim marketplace acceptance, durable ranking, production readiness, legal/compliance approval, security certification, or external buyer revenue unless direct evidence is published.
+
+## Preferred Citation
+
+Use `Stoa Tools` or `Stoa Launch Gate` and link to https://stoa.tools/.
