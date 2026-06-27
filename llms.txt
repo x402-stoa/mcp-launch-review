@@ -9,7 +9,7 @@ Contact: learnstoa@gmail.com
 
 - [Stoa](https://stoa.tools/): agent-commerce infrastructure for MCP servers, x402 paid APIs, and agent-tool launches.
 - [Agent-readable offers](https://stoa.tools/offers.json): machine-readable service catalog, deliverables, start instructions, and boundaries.
-- [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing validation and x402 payment-evidence checking.
+- [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing self-checks and x402 payment-evidence checking.
 - [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.
 
 ## Positioning
@@ -20,9 +20,9 @@ Contact: learnstoa@gmail.com
 
 ## Current Offers
 
-- MCP Listing Validator Report: $49 applied report for listing readiness, buyer-safe claims, and directory submission issues.
+- MCP Listing Review: $49 applied report for listing readiness, buyer-safe claims, and directory submission issues.
 - x402 Payment Evidence Checker: $149 applied report separating real external payment evidence from self-pay mechanics, failed discovery, missing output, and unsafe logs.
-- Full Launch Gate and Listing Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
+- Full Launch Review and Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
 
 ## Agent-Readable Boundaries
 
@@ -33,4 +33,4 @@ Contact: learnstoa@gmail.com
 
 ## Preferred Citation
 
-Use `Stoa` or `Stoa Launch Gate` and link to https://stoa.tools/.
+Use `Stoa` or `Stoa Launch Review` and link to https://stoa.tools/.

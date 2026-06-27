@@ -9,18 +9,18 @@ As repeated checks mature, Stoa can package them as agent-facing validation, pay
 ## Paid Offers
 
 - Free Launch Precheck.
-- `$49` MCP Listing Validator Report.
+- `$49` MCP Listing Review.
 - `$149` x402 Payment Evidence Checker.
-- `$299` Full Launch Gate and Listing Repair.
+- `$299` Full Launch Review and Repair.
 
 To request a review, email `learnstoa@gmail.com` with the public URL and target offer. Stoa confirms scope before sending any payment path.
 
 ## Contents
 
 - `stoa-x402-mcp-launch-review/`: Agent Skill package for source-grounded launch and listing review.
-- `stoa-validator-mcp-server/`: Public MCP server bundle for validating MCP listings and x402 payment evidence.
+- `stoa-validator-mcp-server/`: Public MCP server bundle for local MCP listing self-checks and x402 payment evidence checks.
 - `index.html`: GitHub Pages landing page.
 
 ## Scope
 
-Stoa's current public surface is launch readiness, listing validation, and payment-evidence review using public-safe inputs. Legal, compliance, security certification, private-source review, wallet funding, and account setup are separate.
+Stoa's current public surface is launch readiness, listing review, and payment-evidence checks using public-safe inputs. Legal, compliance, security certification, private-source review, wallet funding, and account setup are separate.

@@ -22,24 +22,24 @@
     "teams preparing services for pay.sh, pay-skills, or agent-readable service catalogs",
     "paid API builders preparing launch pages, public docs, and agent-readable metadata"
   ],
-  "pricing_note": "Stoa Launch Gate is the umbrella. Public paid entry starts with the $49 MCP Listing Validator; the $149 x402 Payment Evidence Checker is the specialized payment-proof gate; the $299 Full Launch Gate and Listing Repair bundle combines validator, claim review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
+  "pricing_note": "Public paid entry starts with the $49 MCP Listing Review; the $149 x402 Payment Evidence Checker is the specialized payment-proof check; the $299 Full Launch Review and Repair bundle combines listing review, claim/evidence review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
   "offers": [
     {
       "name": "Free Launch Precheck",
       "price_usd": 0,
       "deliverables": [
         "three-line first pass",
-        "best-fit paid gate recommendation",
+        "best-fit paid review recommendation",
         "scope question before any payment path"
       ],
       "input_needed": "One public URL plus the launch, listing, or payment-evidence question you need answered."
     },
     {
-      "name": "MCP Listing Validator Report",
+      "name": "MCP Listing Review",
       "price_usd": 49,
       "deliverables": [
-        "directory-readiness verdict",
-        "MCP setup clarity check",
+        "directory-readiness notes",
+        "MCP setup clarity review",
         "buyer-facing copy corrections",
         "submission repair notes"
       ],
@@ -58,10 +58,10 @@
       "input_needed": "Redacted public-safe payment evidence, route description, launch claim, and relevant logs or screenshots."
     },
     {
-      "name": "Full Launch Gate and Listing Repair",
+      "name": "Full Launch Review and Repair",
       "price_usd": 299,
       "deliverables": [
-        "MCP listing validation",
+        "MCP listing review",
         "buyer-safe claim/evidence review",
         "payment-risk scan",
         "listing and metadata rewrite",
@@ -76,12 +76,12 @@
     {
       "name": "Stoa Validator MCP Server Bundle",
       "url": "https://stoa.tools/stoa-validator-mcp-server/",
-      "purpose": "Public local validation artifact for MCP listing readiness and x402 payment-evidence checking."
+      "purpose": "Public local self-check artifact for MCP listing review and x402 payment-evidence checking."
     },
     {
       "name": "Launch Review Skill Package",
       "url": "https://stoa.tools/stoa-x402-mcp-launch-review/",
-      "purpose": "Public self-check artifacts and examples for Launch Gate builder-onboarding workflows."
+      "purpose": "Public self-check artifacts and examples for launch review builder-onboarding workflows."
     },
     {
       "name": "GitHub repository",
