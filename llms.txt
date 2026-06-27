@@ -1,21 +1,21 @@
 # Stoa
 
-> Stoa builds business infrastructure for agents and the humans who make services available to them. The current paid wedge helps builders make MCP, x402, paid API, and agent-tool services agent-readable, chargeable, callable, and evidence-backed; the longer-term layer is agent-facing commerce primitives.
+> Stoa builds business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, safe claims, payment evidence, and outputs agents can read.
 
 Canonical site: https://stoa.tools/
 Contact: learnstoa@gmail.com
 
 ## Core Pages
 
-- [Stoa](https://stoa.tools/): agent-commerce infrastructure, starting with paid builder onboarding/readiness for MCP servers, x402 paid APIs, and agent-tool launches.
+- [Stoa](https://stoa.tools/): agent-commerce infrastructure for MCP servers, x402 paid APIs, and agent-tool launches.
 - [Agent-readable offers](https://stoa.tools/offers.json): machine-readable service catalog, deliverables, start instructions, and boundaries.
 - [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing validation and x402 payment-evidence checking.
 - [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.
 
 ## Positioning
 
-- Builder onboarding lane: help human builders make services listable, chargeable, callable, and evidence-backed.
-- Agent services lane: turn repeated readiness checks into validation, payment-evidence, policy, receipt, failure, and service-readiness primitives agents can eventually call directly.
+- Launch readiness: help human builders make services listable, chargeable, callable, and evidence-backed.
+- Agent-readable services: turn repeated readiness checks into validation, payment-evidence, policy, receipt, failure, and service-readiness outputs that agents can evaluate or eventually call directly.
 - Trust and evidence are core primitives inside Stoa, not the whole company identity.
 
 ## Current Offers

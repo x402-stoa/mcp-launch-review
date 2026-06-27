@@ -2,7 +2,7 @@
   "name": "Stoa",
   "url": "https://stoa.tools/",
   "contact": "learnstoa@gmail.com",
-  "positioning": "Business infrastructure for agents and the humans who make services available to them. The current paid wedge helps builders make MCP, x402, paid API, and agent-tool services agent-readable, chargeable, callable, and evidence-backed.",
+  "positioning": "Business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, safe claims, payment evidence, and outputs agents can read.",
   "lanes": [
     {
       "name": "Builder onboarding and readiness",
