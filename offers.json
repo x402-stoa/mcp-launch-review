@@ -9,19 +9,17 @@
     "agent-tool teams that need buyer-safe claims and first-call risk checks",
     "paid API builders preparing launch pages, public docs, and agent-readable metadata"
   ],
+  "pricing_note": "Stoa Launch Gate is the umbrella. Public paid entry starts with the $49 MCP Listing Validator; the $149 x402 Payment Evidence Checker is the specialized payment-proof gate; the $299 Full Launch Gate and Listing Repair bundle combines validator, claim review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
   "offers": [
     {
-      "name": "Stoa Launch Gate",
-      "price_usd": 49,
+      "name": "Free Launch Precheck",
+      "price_usd": 0,
       "deliverables": [
-        "launch-readiness verdict",
-        "buyer-safe listing rewrite",
-        "claim/evidence matrix",
-        "blocked claims and first-call risks",
-        "payment-evidence and metadata fixes",
-        "next launch or payment test"
+        "three-line first pass",
+        "best-fit paid gate recommendation",
+        "scope question before any payment path"
       ],
-      "input_needed": "One public listing, repo, docs page, endpoint description, MCP server page, x402 route, or marketplace draft."
+      "input_needed": "One public URL plus the launch, listing, or payment-evidence question you need answered."
     },
     {
       "name": "MCP Listing Validator Report",
@@ -47,10 +45,12 @@
       "input_needed": "Redacted public-safe payment evidence, route description, launch claim, and relevant logs or screenshots."
     },
     {
-      "name": "Launch Review and Listing Repair",
+      "name": "Full Launch Gate and Listing Repair",
       "price_usd": 299,
       "deliverables": [
-        "Launch Gate review",
+        "MCP listing validation",
+        "buyer-safe claim/evidence review",
+        "payment-risk scan",
         "listing and metadata rewrite",
         "directory-ready submission fields",
         "launch page repair notes",

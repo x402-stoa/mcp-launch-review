@@ -16,7 +16,7 @@ Contact: learnstoa@gmail.com
 
 - MCP Listing Validator Report: $49 applied report for listing readiness, buyer-safe claims, and directory submission issues.
 - x402 Payment Evidence Checker: $149 applied report separating real external payment evidence from self-pay mechanics, failed discovery, missing output, and unsafe logs.
-- Launch Review and Listing Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
+- Full Launch Gate and Listing Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
 
 ## Agent-Readable Boundaries
 
