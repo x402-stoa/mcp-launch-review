@@ -7,6 +7,9 @@
     <meta name="description" content="Stoa Launch Gate reviews MCP servers, x402 paid APIs, and agent-tool launches for listing readiness, payment evidence, first-call risk, and buyer-safe claims.">
     <meta name="keywords" content="x402 launch review, MCP listing validator, agent commerce, MCP server validation, x402 payment evidence, agent tool launch, paid API readiness, AI agent commerce trust gate">
     <link rel="canonical" href="https://stoa.tools/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <meta property="og:title" content="Stoa Launch Gate for x402, MCP, and Agent-Tool Teams">
     <meta property="og:description" content="Buyer-safe launch validation for MCP servers, x402 paid APIs, and agent commerce tools.">
     <meta property="og:type" content="website">
@@ -34,7 +37,7 @@
         "offers": [
           {
             "@type": "Offer",
-            "name": "MCP Listing Validator Report",
+            "name": "Stoa Launch Gate",
             "price": "49",
             "priceCurrency": "USD"
           },
@@ -88,314 +91,759 @@
     <style>
       :root {
         color-scheme: light;
-        --ink: #14211a;
-        --muted: #51635b;
-        --line: #d8e1dc;
-        --paper: #f6f8f7;
-        --panel: #ffffff;
-        --green: #245b4a;
-        --red: #8c2f39;
-        --blue: #264f7d;
+        --chalk: #FAFAF8;
+        --warm: #F8F5F0;
+        --stone: #E8E6E1;
+        --ash: #9B9892;
+        --slate: #5C5A55;
+        --ink: #0D0D0F;
+        --ink-surface: #0D0D0F;
+        --azure: #2D5BFF;
+        --azure-soft: #EBF0FF;
+        --azure-dim: rgba(45, 91, 255, 0.12);
+        --success: #1A7F5A;
+        --success-bg: #E6F5EE;
+        --warning: #D4870E;
+        --warning-bg: #FFF5E0;
+        --error: #C0392B;
+        --error-bg: #FDECEA;
+        --max: 1120px;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
       body {
         margin: 0;
-        background: var(--paper);
+        background: var(--chalk);
         color: var(--ink);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
       }
 
       a {
-        color: var(--blue);
+        color: var(--azure);
       }
 
-      .hero {
-        min-height: 76vh;
-        display: flex;
-        align-items: end;
-        background:
-          linear-gradient(rgba(9, 19, 14, 0.12), rgba(9, 19, 14, 0.72)),
-          url("stoa-x402-mcp-launch-review/assets/stoa-x-header-v2.png") center / cover no-repeat;
-        color: #fff;
+      .mono,
+      code,
+      th,
+      .eyebrow,
+      .badge,
+      .artifact-label,
+      .price-kicker,
+      .nav-meta {
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       }
 
-      .hero-inner,
-      .section-inner {
-        width: min(1120px, calc(100% - 32px));
+      .site-nav {
+        min-height: 64px;
+        border-bottom: 1px solid var(--stone);
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav-inner,
+      .section-inner,
+      .hero-inner {
+        width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
       }
 
-      .hero-inner {
-        padding: 0 0 42px;
+      .nav-inner {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .brand-mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        background: var(--ink);
+        display: grid;
+        place-items: center;
+        color: var(--chalk);
+        font-size: 15px;
+        line-height: 1;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        color: var(--slate);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+
+      .nav-meta {
+        color: var(--ash);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        min-height: 74svh;
+        display: flex;
+        align-items: center;
+        background:
+          linear-gradient(90deg, rgba(250, 250, 248, 0.98) 0%, rgba(250, 250, 248, 0.92) 48%, rgba(250, 250, 248, 0.64) 72%, rgba(13, 13, 15, 0.18) 100%),
+          url("stoa-x402-mcp-launch-review/assets/stoa-x-header-v2.png") center right / cover no-repeat;
+        border-bottom: 1px solid var(--stone);
+      }
+
+      .hero-content {
+        max-width: 760px;
+        width: 100%;
+        padding: 72px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+        border: 1px solid rgba(45, 91, 255, 0.2);
+        border-radius: 999px;
+        background: var(--azure-soft);
+        color: var(--azure);
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 99px;
+        background: var(--azure);
       }
 
       h1 {
-        max-width: 880px;
-        margin: 0 0 14px;
-        font-size: clamp(34px, 7vw, 76px);
-        line-height: 0.96;
+        max-width: 760px;
+        margin: 0 0 18px;
+        color: var(--ink);
+        font-size: clamp(36px, 7vw, 72px);
+        line-height: 1.02;
+        font-weight: 800;
+        overflow-wrap: normal;
       }
 
       .lead {
-        max-width: 760px;
-        margin: 0 0 22px;
-        color: rgba(255, 255, 255, 0.92);
-        font-size: 19px;
-        line-height: 1.45;
+        max-width: 690px;
+        margin: 0 0 28px;
+        color: var(--slate);
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.55;
       }
 
       .actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 12px;
+        margin-bottom: 28px;
       }
 
       .button {
+        min-height: 46px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 42px;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        border-radius: 8px;
-        padding: 0 14px;
-        color: #fff;
+        border-radius: 12px;
+        border: 1.5px solid var(--stone);
+        padding: 0 18px;
+        color: var(--ink);
+        background: rgba(250, 250, 248, 0.78);
         text-decoration: none;
         font-weight: 700;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        border-color: var(--ash);
       }
 
       .button.primary {
-        border-color: #fff;
-        background: #fff;
-        color: #14211a;
+        border-color: var(--azure);
+        background: var(--azure);
+        color: var(--chalk);
+      }
+
+      .button.primary:hover {
+        border-color: var(--azure);
+        background: var(--azure);
+        box-shadow: 0 8px 24px var(--azure-dim);
+      }
+
+      .trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        max-width: 760px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        border: 1px solid var(--stone);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--slate);
+        padding: 0 10px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       section {
-        padding: 34px 0;
+        padding: 72px 0;
+      }
+
+      .section-alt {
+        background: var(--warm);
+        border-top: 1px solid var(--stone);
+        border-bottom: 1px solid var(--stone);
+      }
+
+      .section-dark {
+        background: var(--ink-surface);
+        color: var(--chalk);
+      }
+
+      .section-kicker {
+        margin-bottom: 10px;
+        color: var(--azure);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
       }
 
       h2 {
+        max-width: 740px;
         margin: 0 0 14px;
-        font-size: 28px;
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.12;
       }
 
-      p,
-      li {
-        line-height: 1.55;
+      .section-copy {
+        max-width: 720px;
+        margin: 0 0 34px;
+        color: var(--slate);
+        font-size: 17px;
       }
 
-      .muted {
-        color: var(--muted);
+      .section-dark .section-copy,
+      .section-dark p {
+        color: rgba(250, 250, 248, 0.72);
       }
 
-      .grid {
+      .offer-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
       }
 
-      .card {
-        min-height: 160px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--panel);
-        padding: 16px;
-      }
-
-      .card strong {
-        display: block;
-        margin-bottom: 8px;
-      }
-
-      .strip {
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
+      .offer-card,
+      .artifact-card {
+        min-height: 240px;
+        border: 1px solid var(--stone);
+        border-radius: 14px;
         background: #ffffff;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
       }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #fff;
+      .offer-card.featured {
+        border-color: rgba(45, 91, 255, 0.35);
+        box-shadow: inset 0 3px 0 var(--azure);
       }
 
-      th,
-      td {
-        border-top: 1px solid var(--line);
-        padding: 11px;
-        text-align: left;
-        vertical-align: top;
+      .price-kicker {
+        color: var(--ash);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
 
-      th {
-        width: 30%;
+      .price {
+        margin: 7px 0 4px;
+        color: var(--ink);
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
       }
 
-      code {
-        overflow-wrap: anywhere;
-        border-radius: 4px;
-        background: #edf2ee;
-        padding: 1px 4px;
+      .offer-card h3,
+      .artifact-card h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        line-height: 1.25;
       }
 
-      .pill {
-        display: inline-flex;
-        margin: 0 6px 8px 0;
-        border-radius: 999px;
-        background: #eaf1ed;
-        padding: 6px 10px;
-        color: #1f493d;
-        font-weight: 700;
+      .offer-card p,
+      .artifact-card p {
+        margin: 0;
+        color: var(--slate);
         font-size: 14px;
       }
 
-      .warn {
-        color: var(--red);
-        font-weight: 700;
+      .offer-card ul {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
       }
 
-      @media (max-width: 640px) {
+      .offer-card li {
+        color: var(--slate);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .offer-card li::before {
+        content: "->";
+        color: var(--azure);
+        margin-right: 7px;
+      }
+
+      .flow-table {
+        display: grid;
+        border: 1px solid var(--stone);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .flow-row {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+      }
+
+      .flow-row + .flow-row {
+        border-top: 1px solid var(--stone);
+      }
+
+      .flow-label {
+        padding: 18px 20px;
+        background: var(--warm);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .flow-value {
+        padding: 18px 20px;
+        color: var(--slate);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 34px;
+        align-items: start;
+      }
+
+      .artifact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .artifact-card {
+        min-height: 210px;
+        background: var(--chalk);
+      }
+
+      .artifact-label {
+        margin-bottom: 12px;
+        color: var(--azure);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .artifact-card a {
+        margin-top: auto;
+        overflow-wrap: anywhere;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      code {
+        border-radius: 5px;
+        background: var(--warm);
+        color: var(--ink);
+        padding: 2px 5px;
+        font-size: 0.92em;
+      }
+
+      .dark-panel {
+        max-width: 840px;
+      }
+
+      .dark-panel h2 {
+        color: var(--chalk);
+      }
+
+      .boundary-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .boundary {
+        min-height: 116px;
+        border: 1px solid rgba(250, 250, 248, 0.16);
+        border-radius: 12px;
+        padding: 16px;
+        background: rgba(250, 250, 248, 0.04);
+      }
+
+      .boundary strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--chalk);
+      }
+
+      footer {
+        border-top: 1px solid var(--stone);
+        padding: 28px 0;
+        background: var(--chalk);
+      }
+
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--ash);
+        font-size: 13px;
+      }
+
+      @media (max-width: 920px) {
+        .nav-links,
+        .nav-meta {
+          display: none;
+        }
+
         .hero {
-          min-height: 72vh;
+          min-height: 70svh;
+          background:
+            linear-gradient(rgba(250, 250, 248, 0.96), rgba(250, 250, 248, 0.88)),
+            url("stoa-x402-mcp-launch-review/assets/stoa-x-header-v2.png") center / cover no-repeat;
         }
 
-        .lead {
-          font-size: 17px;
+        .hero-content {
+          padding: 54px 0;
         }
 
-        th,
-        td {
-          display: block;
+        .offer-grid,
+        .artifact-grid,
+        .boundary-list,
+        .split {
+          grid-template-columns: 1fr;
+        }
+
+        .flow-row {
+          grid-template-columns: 1fr;
+        }
+
+        .flow-label {
+          padding-bottom: 0;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .nav-inner,
+        .section-inner,
+        .hero-inner,
+        .footer-inner {
+          width: min(100% - 32px, var(--max));
+        }
+
+        .hero {
+          min-height: 76svh;
+        }
+
+        .hero-content {
+          max-width: 100%;
+        }
+
+        h1 {
+          max-width: 100%;
+          font-size: 34px;
+          line-height: 1.08;
+        }
+
+        .lead,
+        .section-copy,
+        .flow-value,
+        .offer-card p,
+        .artifact-card p,
+        .boundary p {
+          overflow-wrap: anywhere;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
           width: 100%;
         }
 
-        th {
-          padding-bottom: 0;
+        section {
+          padding: 52px 0;
         }
       }
     </style>
   </head>
   <body>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Stoa Tools</span>
+        </a>
+        <div class="nav-links">
+          <a href="#offers">Offers</a>
+          <a href="#flow">Process</a>
+          <a href="#artifacts">Artifacts</a>
+          <a href="offers.json">offers.json</a>
+        </div>
+        <div class="nav-meta">Agent commerce launch gate</div>
+      </div>
+    </nav>
+
     <header class="hero">
       <div class="hero-inner">
-        <h1>Launch safely before agents spend money.</h1>
-        <p class="lead">Stoa Launch Gate validates MCP servers, x402 paid APIs, and agent-tool launches before teams list, charge, or route buyer agents. Get buyer-safe claims, payment-evidence checks, first-call risk notes, and concrete launch fixes.</p>
-        <div class="actions">
-          <a class="button primary" href="mailto:learnstoa@gmail.com?subject=Paid%20x402%2FMCP%20launch%20review%20request">Request a paid review</a>
-          <a class="button" href="#paid-offer">See deliverables</a>
-          <a class="button" href="stoa-validator-mcp-server/">Inspect validator artifact</a>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> x402 / MCP / agent tools</div>
+          <h1>Launch safely before agents spend money.</h1>
+          <p class="lead">Stoa Launch Gate reviews MCP servers, x402 paid APIs, and agent-tool launches for listing readiness, payment evidence, buyer-safe claims, and first-call risk.</p>
+          <div class="actions">
+            <a class="button primary" href="mailto:learnstoa@gmail.com?subject=Paid%20x402%2FMCP%20launch%20review%20request">Request a paid review</a>
+            <a class="button" href="#offers">See offers</a>
+            <a class="button" href="stoa-validator-mcp-server/">Inspect validator</a>
+          </div>
+          <div class="trust-strip" aria-label="Review focus areas">
+            <span class="badge">MCP listing readiness</span>
+            <span class="badge">x402 payment evidence</span>
+            <span class="badge">Buyer-safe claims</span>
+            <span class="badge">Machine-readable outputs</span>
+          </div>
         </div>
       </div>
     </header>
 
-    <section id="paid-offer">
+    <section id="offers">
       <div class="section-inner">
-        <h2>Agent Commerce Launch Validation</h2>
-        <p class="muted">For MCP server maintainers, x402 sellers, paid API builders, and agent-tool teams preparing for directories, buyer agents, paid calls, or public launch.</p>
-        <div class="grid">
-          <div class="card">
-            <strong>$49 Stoa Launch Gate</strong>
-            <p>Applied validation for one public listing, repo, route, or launch page: buyer clarity, unsafe claims, payment evidence, first-call risk, and next fixes.</p>
+        <div class="section-kicker mono">Paid launch validation</div>
+        <h2>Pick the gate that matches your launch risk.</h2>
+        <p class="section-copy">Send one public URL, route, listing draft, payment-evidence bundle, or launch page. Stoa confirms scope before sending any payment path.</p>
+        <div class="offer-grid">
+          <article class="offer-card featured">
+            <div class="price-kicker">Entry gate</div>
+            <div class="price">$49</div>
+            <h3>Stoa Launch Gate</h3>
+            <p>Applied review for one listing, repo, route, launch page, or marketplace draft.</p>
+            <ul>
+              <li>Readiness verdict</li>
+              <li>Buyer-safe copy</li>
+              <li>Blocked claims</li>
+            </ul>
+          </article>
+          <article class="offer-card">
+            <div class="price-kicker">Directory prep</div>
+            <div class="price">$49</div>
+            <h3>MCP Listing Validator</h3>
+            <p>Checks whether a server listing is clear enough for directories and buyer agents.</p>
+            <ul>
+              <li>Setup clarity</li>
+              <li>Metadata repairs</li>
+              <li>Submission notes</li>
+            </ul>
+          </article>
+          <article class="offer-card">
+            <div class="price-kicker">Payment proof</div>
+            <div class="price">$149</div>
+            <h3>x402 Payment Evidence Checker</h3>
+            <p>Separates real payment evidence from self-pay mechanics, discovery gaps, and unsafe logs.</p>
+            <ul>
+              <li>Route binding</li>
+              <li>Settlement trail</li>
+              <li>Overclaim review</li>
+            </ul>
+          </article>
+          <article class="offer-card">
+            <div class="price-kicker">Repair pass</div>
+            <div class="price">$299</div>
+            <h3>Launch Review & Listing Repair</h3>
+            <p>Turns the review into corrected launch copy, directory fields, and a next buyer/listing action.</p>
+            <ul>
+              <li>Asset rewrite</li>
+              <li>Listing fields</li>
+              <li>Next action packet</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section-alt">
+      <div class="section-inner">
+        <div class="section-kicker mono">How it works</div>
+        <h2>A practical gate between launch copy and agent spend.</h2>
+        <p class="section-copy">Stoa is built for builders who need their public surface to be inspectable by humans, directories, and buyer agents.</p>
+        <div class="flow-table">
+          <div class="flow-row">
+            <div class="flow-label">You send</div>
+            <div class="flow-value">A public README, docs page, endpoint description, MCP listing, x402 route, pricing note, marketplace draft, or redacted public-safe payment evidence.</div>
           </div>
-          <div class="card">
-            <strong>MCP Listing Validator</strong>
-            <p>Directory-readiness verdict, corrected buyer-facing copy, MCP setup clarity check, claim/evidence matrix, and submission repair notes.</p>
+          <div class="flow-row">
+            <div class="flow-label">Stoa checks</div>
+            <div class="flow-value">Listing clarity, source-grounded claims, payment evidence, first-call risk, metadata gaps, blocked overclaims, and the next safe test.</div>
           </div>
-          <div class="card">
-            <strong>x402 Payment Evidence Checker</strong>
-            <p>Checks whether paid-call evidence supports the launch claim: route binding, amount, settlement, delivery, receipt trail, and unsupported overclaims.</p>
+          <div class="flow-row">
+            <div class="flow-label">You get</div>
+            <div class="flow-value">A Launch Gate verdict, buyer-safe listing rewrite, claim/evidence matrix, blocked claims, concrete fixes, and optional buyer message.</div>
           </div>
-          <div class="card">
-            <strong>Launch & Listing Repair</strong>
-            <p>Rewrite launch assets, repair metadata, prepare directory-ready fields, and turn the review into a concrete next buyer or listing step.</p>
+          <div class="flow-row">
+            <div class="flow-label">Start</div>
+            <div class="flow-value">Email <a href="mailto:learnstoa@gmail.com?subject=Paid%20x402%2FMCP%20launch%20review%20request">learnstoa@gmail.com</a> with the public URL and which gate you want. Stoa confirms scope before sending any payment path.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="strip">
-      <div class="section-inner">
-        <h2>What You Send, What You Get</h2>
-        <table>
-          <tr>
-            <th>You send</th>
-            <td>Public README, docs page, endpoint description, MCP listing, x402 route, pricing note, or marketplace draft.</td>
-          </tr>
-          <tr>
-            <th>You get</th>
-            <td>Launch Gate verdict, buyer-safe listing rewrite, claim/evidence matrix, blocked claims, first-call/payment risks, metadata fixes, next test, and optional buyer message.</td>
-          </tr>
-          <tr>
-            <th>How to start</th>
-            <td>Email <a href="mailto:learnstoa@gmail.com?subject=Paid%20x402%2FMCP%20launch%20review%20request">learnstoa@gmail.com</a> with the public URL and which offer you want. Stoa will confirm scope before sending any payment path.</td>
-          </tr>
-          <tr>
-            <th>Best outcome</th>
-            <td>A sharper launch surface that buyer agents, directories, and humans can understand: what it does, what evidence supports it, what to fix, and what to test next.</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
     <section>
-      <div class="section-inner">
-        <h2>Why Agent Launches Need A Gate</h2>
-        <p class="muted">Agent commerce rewards services that are easy to inspect, safe to call, and precise about payment evidence. Stoa packages that readiness work into a practical launch gate for the builders shipping MCP servers, x402 endpoints, paid APIs, and agent tools.</p>
-        <span class="pill">MCP listing readiness</span>
-        <span class="pill">x402 payment evidence</span>
-        <span class="pill">buyer-agent clarity</span>
-        <span class="pill">machine-readable outputs</span>
+      <div class="section-inner split">
+        <div>
+          <div class="section-kicker mono">Why a gate matters</div>
+          <h2>Agent commerce punishes vague launches.</h2>
+          <p class="section-copy">When agents can inspect, call, and pay for tools, launch pages need more than persuasive copy. They need evidence, route clarity, safe claims, and metadata that machines can use.</p>
+        </div>
+        <div>
+          <div class="flow-table">
+            <div class="flow-row">
+              <div class="flow-label">Claim</div>
+              <div class="flow-value">What the tool says it can do, and what evidence supports that claim.</div>
+            </div>
+            <div class="flow-row">
+              <div class="flow-label">Payment</div>
+              <div class="flow-value">Whether the x402 trace proves route, amount, settlement, delivery, and receipt.</div>
+            </div>
+            <div class="flow-row">
+              <div class="flow-label">Listing</div>
+              <div class="flow-value">Whether a directory, registry, or buyer agent can understand setup, scope, and limits.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="strip">
+    <section id="artifacts" class="section-alt">
       <div class="section-inner">
-        <h2>Built For Agent Commerce</h2>
-        <p class="muted">Stoa combines source-grounded claim review, MCP listing validation, x402 payment-evidence checking, and payment-failure diagnosis into launch-readiness workflows for agent-tool teams.</p>
-        <span class="pill">source-grounded claims</span>
-        <span class="pill">first-call risk checks</span>
-        <span class="pill">payment proof review</span>
-        <span class="pill">directory-ready fixes</span>
+        <div class="section-kicker mono">Agent-readable artifacts</div>
+        <h2>Public proof materials, not a hidden black box.</h2>
+        <p class="section-copy">These files help humans and agents inspect the offer, examples, and local validation artifacts before requesting paid work.</p>
+        <div class="artifact-grid">
+          <article class="artifact-card">
+            <div class="artifact-label">Service catalog</div>
+            <h3>Offers JSON</h3>
+            <p>Machine-readable Stoa offers, deliverables, inputs, and public boundaries.</p>
+            <a href="offers.json"><code>offers.json</code></a>
+          </article>
+          <article class="artifact-card">
+            <div class="artifact-label">LLM citation</div>
+            <h3>LLMs text</h3>
+            <p>Compact agent-facing summary for citation, discovery, and tool-context use.</p>
+            <a href="llms.txt"><code>llms.txt</code></a>
+          </article>
+          <article class="artifact-card">
+            <div class="artifact-label">Local validation</div>
+            <h3>Validator MCP Server</h3>
+            <p>Public local artifact for MCP listing validation and x402 evidence checks.</p>
+            <a href="stoa-validator-mcp-server/"><code>stoa-validator-mcp-server/</code></a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section>
-      <div class="section-inner">
-        <h2>Inspection Artifacts</h2>
-        <table>
-          <tr>
-            <th>Request Launch Gate</th>
-            <td><a href="mailto:learnstoa@gmail.com?subject=Paid%20x402%2FMCP%20launch%20review%20request">learnstoa@gmail.com</a></td>
-          </tr>
-          <tr>
-            <th>Skill file</th>
-            <td><a href="https://raw.githubusercontent.com/x402-stoa/mcp-launch-review/main/stoa-x402-mcp-launch-review/SKILL.md"><code>stoa-x402-mcp-launch-review/SKILL.md</code></a></td>
-          </tr>
-          <tr>
-            <th>Output template</th>
-            <td><a href="stoa-x402-mcp-launch-review/assets/review-output-template.json"><code>stoa-x402-mcp-launch-review/assets/review-output-template.json</code></a></td>
-          </tr>
-          <tr>
-            <th>Agent-readable offers</th>
-            <td><a href="offers.json"><code>offers.json</code></a> and <a href="llms.txt"><code>llms.txt</code></a></td>
-          </tr>
-          <tr>
-            <th>MCP validator bundle</th>
-            <td><a href="stoa-validator-mcp-server/"><code>stoa-validator-mcp-server/</code></a></td>
-          </tr>
-          <tr>
-            <th>Scope</th>
-            <td>Public-source launch readiness and payment-evidence review. Legal, compliance, security certification, private-source review, wallet funding, and account setup are separate.</td>
-          </tr>
-          <tr>
-            <th>GitHub repo</th>
-            <td><a href="https://github.com/x402-stoa/mcp-launch-review"><code>x402-stoa/mcp-launch-review</code></a></td>
-          </tr>
-        </table>
+    <section class="section-dark">
+      <div class="section-inner dark-panel">
+        <div class="section-kicker mono">Boundaries</div>
+        <h2>Scope is confirmed before money moves.</h2>
+        <p>Public artifacts are self-check and proof materials. Paid work is scoped manually before Stoa sends any payment path. Private credentials, wallet secrets, payment signatures, and non-public email bodies should not be sent.</p>
+        <div class="boundary-list">
+          <div class="boundary">
+            <strong>Included</strong>
+            <p>Public-source launch readiness, listing clarity, payment evidence, buyer-safe claims, and next tests.</p>
+          </div>
+          <div class="boundary">
+            <strong>Separate</strong>
+            <p>Legal review, compliance approval, security certification, private-source review, wallet funding, and account setup.</p>
+          </div>
+          <div class="boundary">
+            <strong>Current surface</strong>
+            <p>Static public artifacts and local validation packages. No hosted production API is claimed here.</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-inner">
+        <strong>Stoa Tools</strong>
+        <span class="mono">stoa.tools / x402-stoa / learnstoa@gmail.com</span>
+      </div>
+    </footer>
   </body>
 </html>
