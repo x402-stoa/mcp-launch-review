@@ -1,16 +1,22 @@
-# Stoa Tools
+# Stoa
 
-> Stoa builds trust and launch-readiness tools for agent commerce: MCP listing validation, x402 payment-evidence checking, source-grounded claim review, and agent-payment failure diagnosis.
+> Stoa builds business infrastructure for agents and the humans who make services available to them. The current paid wedge helps builders make MCP, x402, paid API, and agent-tool services agent-readable, chargeable, callable, and evidence-backed; the longer-term layer is agent-facing commerce primitives.
 
 Canonical site: https://stoa.tools/
 Contact: learnstoa@gmail.com
 
 ## Core Pages
 
-- [Stoa Launch Gate](https://stoa.tools/): paid validation for MCP servers, x402 paid APIs, and agent-tool launches before listing, charging, or routing buyer agents.
+- [Stoa](https://stoa.tools/): agent-commerce infrastructure, starting with paid builder onboarding/readiness for MCP servers, x402 paid APIs, and agent-tool launches.
 - [Agent-readable offers](https://stoa.tools/offers.json): machine-readable service catalog, deliverables, start instructions, and boundaries.
 - [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing validation and x402 payment-evidence checking.
 - [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.
+
+## Positioning
+
+- Builder onboarding lane: help human builders make services listable, chargeable, callable, and evidence-backed.
+- Agent services lane: turn repeated readiness checks into validation, payment-evidence, policy, receipt, failure, and service-readiness primitives agents can eventually call directly.
+- Trust and evidence are core primitives inside Stoa, not the whole company identity.
 
 ## Current Offers
 
@@ -23,7 +29,8 @@ Contact: learnstoa@gmail.com
 - Public code and examples are proof/self-check artifacts, not a production hosted API.
 - Paid work requires scoped buyer input and confirmation before any payment destination, checkout link, invoice, wallet address, or live x402 route is sent.
 - Stoa does not claim marketplace acceptance, durable ranking, production readiness, legal/compliance approval, security certification, or external buyer revenue unless direct evidence is published.
+- Agent-facing services and microservices are a strategic direction, not a current hosted production API claim.
 
 ## Preferred Citation
 
-Use `Stoa Tools` or `Stoa Launch Gate` and link to https://stoa.tools/.
+Use `Stoa` or `Stoa Launch Gate` and link to https://stoa.tools/.

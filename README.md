@@ -1,15 +1,17 @@
-# Stoa Launch Gate
+# Stoa
 
-Public distribution repo for Stoa Launch Gate: validation for MCP servers, x402 paid APIs, and agent-tool launches before teams list, charge, or route buyer agents.
+Public distribution repo for Stoa: business infrastructure for agents and the humans who make services available to them.
 
-Stoa checks listing readiness, buyer-safe claims, first-call risk, x402 payment evidence, and launch metadata. The paid deliverable applies the process to a buyer's actual service and returns a decision-ready launch packet.
+The current paid wedge is builder onboarding and readiness for MCP servers, x402 paid APIs, and agent-tool launches. Stoa checks listing readiness, buyer-safe claims, first-call risk, x402 payment evidence, and launch metadata so a service can become agent-readable, chargeable, callable, and evidence-backed.
+
+The longer-term lane is agent-facing commerce primitives: validation, payment evidence, spend policy, receipt verification, failure diagnosis, provider readiness, and tightly scoped commercial services agents can call directly. That direction is not a hosted production API claim in this repo.
 
 ## Paid Offers
 
-- `$49` Stoa Launch Gate first pass.
+- Free Launch Precheck.
 - `$49` MCP Listing Validator Report.
 - `$149` x402 Payment Evidence Checker.
-- `$299` launch/listing repair expansion after a smaller paid review.
+- `$299` Full Launch Gate and Listing Repair.
 
 To request a review, email `learnstoa@gmail.com` with the public URL and target offer. Stoa confirms scope before sending any payment path.
 
@@ -21,4 +23,4 @@ To request a review, email `learnstoa@gmail.com` with the public URL and target 
 
 ## Scope
 
-Stoa Launch Gate is public-source launch readiness and payment-evidence review. Legal, compliance, security certification, private-source review, wallet funding, and account setup are separate.
+Stoa's current public surface is launch readiness, listing validation, and payment-evidence review using public-safe inputs. Legal, compliance, security certification, private-source review, wallet funding, and account setup are separate.

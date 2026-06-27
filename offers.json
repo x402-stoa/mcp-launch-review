@@ -1,12 +1,25 @@
 {
-  "name": "Stoa Launch Gate",
+  "name": "Stoa",
   "url": "https://stoa.tools/",
   "contact": "learnstoa@gmail.com",
-  "positioning": "Launch validation for MCP servers, x402 paid APIs, paid agent tools, and agent-commerce services before listing, charging, or routing buyer agents.",
+  "positioning": "Business infrastructure for agents and the humans who make services available to them. The current paid wedge helps builders make MCP, x402, paid API, and agent-tool services agent-readable, chargeable, callable, and evidence-backed.",
+  "lanes": [
+    {
+      "name": "Builder onboarding and readiness",
+      "status": "current paid lane",
+      "job": "Make services listable, chargeable, callable, and evidence-backed before builders ask directories, platforms, or buyer agents to use them."
+    },
+    {
+      "name": "Agent services and commerce primitives",
+      "status": "future direction, not a hosted production API claim",
+      "job": "Turn repeated checks into agent-facing validation, payment-evidence, policy, receipt, failure, and service-readiness primitives."
+    }
+  ],
   "best_for": [
     "MCP server maintainers preparing for directory submissions",
     "x402 sellers who need payment-evidence review before launch",
     "agent-tool teams that need buyer-safe claims and first-call risk checks",
+    "teams preparing services for pay.sh, pay-skills, or agent-readable service catalogs",
     "paid API builders preparing launch pages, public docs, and agent-readable metadata"
   ],
   "pricing_note": "Stoa Launch Gate is the umbrella. Public paid entry starts with the $49 MCP Listing Validator; the $149 x402 Payment Evidence Checker is the specialized payment-proof gate; the $299 Full Launch Gate and Listing Repair bundle combines validator, claim review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
@@ -68,7 +81,7 @@
     {
       "name": "Launch Review Skill Package",
       "url": "https://stoa.tools/stoa-x402-mcp-launch-review/",
-      "purpose": "Public self-check artifacts and examples for Launch Gate review workflows."
+      "purpose": "Public self-check artifacts and examples for Launch Gate builder-onboarding workflows."
     },
     {
       "name": "GitHub repository",
@@ -85,6 +98,7 @@
   "boundaries": [
     "Paid work is scoped before any payment path, checkout link, invoice, wallet address, or live x402 route is sent.",
     "Public artifacts are self-check and proof materials, not a hosted production API.",
+    "Agent-facing services and microservices are a strategic direction, not a current production availability claim.",
     "Stoa does not claim marketplace acceptance, durable ranking, production readiness, legal/compliance approval, security certification, or external buyer revenue unless direct evidence is published.",
     "Private credentials, wallet secrets, payment signatures, and non-public email bodies should not be sent."
   ],
