@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stoa Validator MCP Server</title>
+    <meta name="description" content="Public local MCP server bundle for MCP listing validation and x402 payment-evidence checks from Stoa Tools.">
+    <link rel="canonical" href="https://stoa.tools/stoa-validator-mcp-server/">
+    <link rel="icon" type="image/svg+xml" href="../assets/stoa-mark.svg?v=1103903">
+    <style>
+      :root {
+        color-scheme: light;
+        --chalk: #FAFAF8;
+        --warm: #F8F5F0;
+        --stone: #E8E6E1;
+        --ash: #9B9892;
+        --slate: #5C5A55;
+        --ink: #0D0D0F;
+        --azure: #2D5BFF;
+        --azure-soft: #EBF0FF;
+        --max: 980px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--chalk);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--azure);
+      }
+
+      .mono,
+      code,
+      .eyebrow,
+      th {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      nav {
+        border-bottom: 1px solid var(--stone);
+        background: rgba(250, 250, 248, 0.94);
+      }
+
+      .nav-inner {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .brand img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .nav-links a {
+        color: var(--slate);
+        text-decoration: none;
+      }
+
+      header {
+        padding: 76px 0 58px;
+        border-bottom: 1px solid var(--stone);
+        background: linear-gradient(180deg, #fff 0%, var(--chalk) 100%);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        margin-bottom: 16px;
+        border: 1px solid rgba(45, 91, 255, 0.2);
+        border-radius: 999px;
+        background: var(--azure-soft);
+        color: var(--azure);
+        padding: 6px 10px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 62px);
+        line-height: 1.04;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 0 0 26px;
+        color: var(--slate);
+        font-size: 19px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid var(--stone);
+        border-radius: 10px;
+        padding: 0 16px;
+        background: #fff;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 750;
+      }
+
+      .button.primary {
+        border-color: var(--azure);
+        background: var(--azure);
+        color: var(--chalk);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .alt {
+        background: var(--warm);
+        border-top: 1px solid var(--stone);
+        border-bottom: 1px solid var(--stone);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: clamp(26px, 4vw, 38px);
+        line-height: 1.12;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .panel {
+        border: 1px solid var(--stone);
+        border-radius: 8px;
+        background: #fff;
+        padding: 18px;
+      }
+
+      .panel h3 {
+        margin: 0 0 8px;
+      }
+
+      .panel p,
+      li {
+        color: var(--slate);
+      }
+
+      pre {
+        overflow-x: auto;
+        border: 1px solid var(--stone);
+        border-radius: 8px;
+        background: #fff;
+        padding: 16px;
+        color: var(--ink);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 18px;
+        background: #fff;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--stone);
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--slate);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      footer {
+        border-top: 1px solid var(--stone);
+        padding: 28px 0;
+        color: var(--ash);
+        font-size: 13px;
+      }
+
+      @media (max-width: 720px) {
+        .nav-inner,
+        .actions {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Primary navigation">
+      <div class="wrap nav-inner">
+        <a class="brand" href="../">
+          <img src="../assets/stoa-mark.svg?v=1103903" alt="" aria-hidden="true">
+          <span>Stoa Tools</span>
+        </a>
+        <div class="nav-links">
+          <a href="../">Launch Gate</a>
+          <a href="../offers.json">offers.json</a>
+          <a href="https://github.com/x402-stoa/mcp-launch-review/tree/main/stoa-validator-mcp-server">Source</a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">Public local MCP bundle</div>
+        <h1>Stoa Validator MCP Server</h1>
+        <p class="lead">A local stdio MCP server for validating MCP listing readiness and x402 payment evidence before builders list, charge, or ask buyer agents to spend.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:learnstoa@gmail.com?subject=Stoa%20Validator%20MCP%20Server%20precheck">Request a Launch Gate review</a>
+          <a class="button" href="README.md">Read package README</a>
+          <a class="button" href="package.json">Inspect package.json</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <h2>What the server checks</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3><code>validate_mcp_listing</code></h3>
+            <p>Checks whether a public MCP, x402, paid API, or agent-tool listing is ready for free/reversible directory submission without overclaiming demand, ranking, production readiness, or revenue.</p>
+          </article>
+          <article class="panel">
+            <h3><code>check_x402_payment_evidence</code></h3>
+            <p>Classifies x402 paid-call evidence as external-payment-ready, mechanics-only, or repair-before-claim.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <h2>Run locally</h2>
+        <p>Use this bundle as a public inspection artifact. Applied review and repair work is scoped through Stoa Launch Gate before any payment path is sent.</p>
+        <pre><code>node stoa-validator-mcp-server.mjs</code></pre>
+        <pre><code>{
+  "mcpServers": {
+    "stoa-validator": {
+      "command": "node",
+      "args": ["stoa-validator-mcp-server.mjs"]
+    }
+  }
+}</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Package facts</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <td><code>stoa-validator-mcp-server</code></td>
+            </tr>
+            <tr>
+              <th>MCP name</th>
+              <td><code>io.github.x402-stoa/stoa-validator-mcp-server</code></td>
+            </tr>
+            <tr>
+              <th>Repository</th>
+              <td><a href="https://github.com/x402-stoa/mcp-launch-review/tree/main/stoa-validator-mcp-server">github.com/x402-stoa/mcp-launch-review/tree/main/stoa-validator-mcp-server</a></td>
+            </tr>
+            <tr>
+              <th>Samples</th>
+              <td><a href="sample-requests/mcp-listing-validator-github-repo-ready-request.json">listing validator sample</a> · <a href="sample-requests/x402-payment-evidence-checker-self-pay.json">self-pay evidence guard sample</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <h2>Boundaries</h2>
+        <ul>
+          <li>This page is a public local bundle, not a hosted production API.</li>
+          <li>It does not certify security, legal compliance, buyer demand, durable marketplace ranking, or external income.</li>
+          <li>No payment destination, checkout link, invoice destination, wallet address, private credential, or live x402 settlement path is published here.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        Stoa Tools · <a href="mailto:learnstoa@gmail.com">learnstoa@gmail.com</a> · <a href="../">Launch Gate</a>
+      </div>
+    </footer>
+  </body>
+</html>
