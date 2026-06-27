@@ -1,0 +1,92 @@
+{
+  "name": "Stoa Launch Gate",
+  "url": "https://stoa.tools/",
+  "contact": "learnstoa@gmail.com",
+  "positioning": "Launch validation for MCP servers, x402 paid APIs, paid agent tools, and agent-commerce services before listing, charging, or routing buyer agents.",
+  "best_for": [
+    "MCP server maintainers preparing for directory submissions",
+    "x402 sellers who need payment-evidence review before launch",
+    "agent-tool teams that need buyer-safe claims and first-call risk checks",
+    "paid API builders preparing launch pages, public docs, and agent-readable metadata"
+  ],
+  "offers": [
+    {
+      "name": "Stoa Launch Gate",
+      "price_usd": 49,
+      "deliverables": [
+        "launch-readiness verdict",
+        "buyer-safe listing rewrite",
+        "claim/evidence matrix",
+        "blocked claims and first-call risks",
+        "payment-evidence and metadata fixes",
+        "next launch or payment test"
+      ],
+      "input_needed": "One public listing, repo, docs page, endpoint description, MCP server page, x402 route, or marketplace draft."
+    },
+    {
+      "name": "MCP Listing Validator Report",
+      "price_usd": 49,
+      "deliverables": [
+        "directory-readiness verdict",
+        "MCP setup clarity check",
+        "buyer-facing copy corrections",
+        "submission repair notes"
+      ],
+      "input_needed": "Public MCP server listing, README, package metadata, or directory draft."
+    },
+    {
+      "name": "x402 Payment Evidence Checker",
+      "price_usd": 149,
+      "deliverables": [
+        "payment-evidence classification",
+        "route and amount consistency check",
+        "settlement/delivery/receipt gap analysis",
+        "unsupported overclaim list",
+        "next safe payment-test recommendation"
+      ],
+      "input_needed": "Redacted public-safe payment evidence, route description, launch claim, and relevant logs or screenshots."
+    },
+    {
+      "name": "Launch Review and Listing Repair",
+      "price_usd": 299,
+      "deliverables": [
+        "Launch Gate review",
+        "listing and metadata rewrite",
+        "directory-ready submission fields",
+        "launch page repair notes",
+        "next buyer or listing action"
+      ],
+      "input_needed": "Public launch surface plus target directory, buyer channel, or listing destination."
+    }
+  ],
+  "public_artifacts": [
+    {
+      "name": "Stoa Validator MCP Server Bundle",
+      "url": "https://stoa.tools/stoa-validator-mcp-server/",
+      "purpose": "Public local validation artifact for MCP listing readiness and x402 payment-evidence checking."
+    },
+    {
+      "name": "Launch Review Skill Package",
+      "url": "https://stoa.tools/stoa-x402-mcp-launch-review/",
+      "purpose": "Public self-check artifacts and examples for Launch Gate review workflows."
+    },
+    {
+      "name": "GitHub repository",
+      "url": "https://github.com/x402-stoa/mcp-launch-review",
+      "purpose": "Public proof and distribution artifact repository."
+    }
+  ],
+  "start": {
+    "method": "email",
+    "email": "learnstoa@gmail.com",
+    "subject": "Paid x402/MCP launch review request",
+    "message_hint": "Send the public URL, which offer you want, and the launch/listing/payment-evidence question you need answered."
+  },
+  "boundaries": [
+    "Paid work is scoped before any payment path, checkout link, invoice, wallet address, or live x402 route is sent.",
+    "Public artifacts are self-check and proof materials, not a hosted production API.",
+    "Stoa does not claim marketplace acceptance, durable ranking, production readiness, legal/compliance approval, security certification, or external buyer revenue unless direct evidence is published.",
+    "Private credentials, wallet secrets, payment signatures, and non-public email bodies should not be sent."
+  ],
+  "last_updated": "2026-06-27"
+}

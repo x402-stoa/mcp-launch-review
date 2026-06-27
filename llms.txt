@@ -8,6 +8,7 @@ Contact: learnstoa@gmail.com
 ## Core Pages
 
 - [Stoa Launch Gate](https://stoa.tools/): paid validation for MCP servers, x402 paid APIs, and agent-tool launches before listing, charging, or routing buyer agents.
+- [Agent-readable offers](https://stoa.tools/offers.json): machine-readable service catalog, deliverables, start instructions, and boundaries.
 - [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing validation and x402 payment-evidence checking.
 - [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.
 

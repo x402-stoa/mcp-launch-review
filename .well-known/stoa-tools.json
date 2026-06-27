@@ -1,0 +1,29 @@
+{
+  "name": "Stoa Tools",
+  "canonical_url": "https://stoa.tools/",
+  "llms_txt": "https://stoa.tools/llms.txt",
+  "offers": "https://stoa.tools/offers.json",
+  "sitemap": "https://stoa.tools/sitemap.xml",
+  "contact": {
+    "email": "learnstoa@gmail.com",
+    "preferred_subject": "Paid x402/MCP launch review request"
+  },
+  "agent_commerce_focus": [
+    "MCP listing validation",
+    "x402 payment-evidence checking",
+    "agent-tool launch readiness",
+    "buyer-safe claim review",
+    "first-call and payment-risk diagnosis"
+  ],
+  "public_artifacts": [
+    "https://stoa.tools/stoa-validator-mcp-server/",
+    "https://stoa.tools/stoa-x402-mcp-launch-review/",
+    "https://github.com/x402-stoa/mcp-launch-review"
+  ],
+  "notices": [
+    "Public artifacts are self-check and proof materials, not a hosted production API.",
+    "Payment destination, checkout, invoice, wallet, and live x402 payment routes are intentionally not published here.",
+    "Do not send secrets, private keys, payment signatures, or private credential material."
+  ],
+  "last_updated": "2026-06-27"
+}
