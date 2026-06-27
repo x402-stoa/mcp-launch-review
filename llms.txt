@@ -1,6 +1,6 @@
 # Stoa
 
-> Stoa builds business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, safe claims, payment evidence, and outputs agents can read.
+> Stoa builds business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.
 
 Canonical site: https://stoa.tools/
 Contact: learnstoa@gmail.com
@@ -15,12 +15,12 @@ Contact: learnstoa@gmail.com
 ## Positioning
 
 - Launch readiness: help human builders make services listable, chargeable, callable, and evidence-backed.
-- Agent-readable services: turn repeated readiness checks into validation, payment-evidence, policy, receipt, failure, and service-readiness outputs that agents can evaluate or eventually call directly.
-- Trust and evidence are core primitives inside Stoa, not the whole company identity.
+- Agent-readable services: turn repeated readiness checks into payment-evidence, policy, receipt, failure, and service-readiness tools that agents can evaluate or eventually call directly.
+- Trust and evidence are part of Stoa's work, not the whole company identity.
 
 ## Current Offers
 
-- MCP Listing Review: $49 applied report for listing readiness, buyer-safe claims, and directory submission issues.
+- MCP Listing Review: $49 applied report for listing readiness, supported claims, and directory submission issues.
 - x402 Payment Evidence Checker: $149 applied report separating real external payment evidence from self-pay mechanics, failed discovery, missing output, and unsafe logs.
 - Full Launch Review and Repair: $299 applied review with listing copy, blocked claims, payment-risk findings, and next launch/payment test.
 

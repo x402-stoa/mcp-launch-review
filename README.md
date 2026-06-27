@@ -2,9 +2,9 @@
 
 Public distribution repo for Stoa: business infrastructure for agents and the humans who make services available to them.
 
-Stoa helps MCP servers, x402 paid APIs, paid API builders, and agent-tool teams prepare services for real agent commerce. Stoa checks listing readiness, buyer-safe claims, first-call risk, x402 payment evidence, and launch metadata so a service can become agent-readable, chargeable, callable, and evidence-backed.
+Stoa helps MCP servers, x402 paid APIs, paid API builders, and agent-tool teams prepare services for real agent commerce. Stoa checks listing readiness, supported claims, first-call risk, x402 payment evidence, and launch metadata so a service is easier for agents and buyers to understand, call, price, and pay for.
 
-As repeated checks mature, Stoa can package them as agent-facing validation, payment-evidence, policy, receipt, failure, and provider-readiness services. That direction is not a hosted production API claim in this repo.
+As repeated checks mature, Stoa can package them as agent-facing payment-evidence, policy, receipt, failure, and provider-readiness tools. That direction is not a hosted production API claim in this repo.
 
 ## Paid Offers
 

@@ -2,27 +2,27 @@
   "name": "Stoa",
   "url": "https://stoa.tools/",
   "contact": "learnstoa@gmail.com",
-  "positioning": "Business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, safe claims, payment evidence, and outputs agents can read.",
+  "positioning": "Business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.",
   "lanes": [
     {
       "name": "Builder onboarding and readiness",
-      "status": "current paid lane",
-      "job": "Make services listable, chargeable, callable, and evidence-backed before builders ask directories, platforms, or buyer agents to use them."
+      "status": "available now",
+      "job": "Make services easier to list, call, price, and pay for before builders ask directories, platforms, or buyer agents to use them."
     },
     {
-      "name": "Agent services and commerce primitives",
+      "name": "Agent services and commerce tools",
       "status": "future direction, not a hosted production API claim",
-      "job": "Turn repeated checks into agent-facing validation, payment-evidence, policy, receipt, failure, and service-readiness primitives."
+      "job": "Turn repeated checks into agent-facing payment-evidence, policy, receipt, failure, and service-readiness tools."
     }
   ],
   "best_for": [
     "MCP server maintainers preparing for directory submissions",
     "x402 sellers who need payment-evidence review before launch",
-    "agent-tool teams that need buyer-safe claims and first-call risk checks",
+    "agent-tool teams that need supported claims and first-call risk checks",
     "teams preparing services for pay.sh, pay-skills, or agent-readable service catalogs",
     "paid API builders preparing launch pages, public docs, and agent-readable metadata"
   ],
-  "pricing_note": "Public paid entry starts with the $49 MCP Listing Review; the $149 x402 Payment Evidence Checker is the specialized payment-proof check; the $299 Full Launch Review and Repair bundle combines listing review, claim/evidence review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
+  "pricing_note": "Public paid entry starts with the $49 MCP Listing Review; the $149 x402 Payment Evidence Checker is the specialized payment-proof check; the $299 Full Launch Review and Repair bundle combines listing review, supported-claims review, payment-risk scan, and applied asset repair. Any $19 pilot pricing is warm-lead-only and not the public price anchor.",
   "offers": [
     {
       "name": "Free Launch Precheck",
@@ -62,7 +62,7 @@
       "price_usd": 299,
       "deliverables": [
         "MCP listing review",
-        "buyer-safe claim/evidence review",
+        "supported-claims review",
         "payment-risk scan",
         "listing and metadata rewrite",
         "directory-ready submission fields",
