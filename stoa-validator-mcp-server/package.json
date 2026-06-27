@@ -1,0 +1,21 @@
+{
+  "name": "stoa-validator-mcp-server",
+  "version": "0.1.0",
+  "mcpName": "io.github.x402-stoa/stoa-validator-mcp-server",
+  "description": "MCP tools for validating MCP listings and x402 payment evidence without overclaiming demand, revenue, ranking, or production readiness.",
+  "type": "module",
+  "bin": {
+    "stoa-validator-mcp-server": "./stoa-validator-mcp-server.mjs"
+  },
+  "scripts": {
+    "start": "node stoa-validator-mcp-server.mjs"
+  },
+  "files": [
+    "stoa-validator-mcp-server.mjs",
+    "mcp-listing-validator.mjs",
+    "x402-payment-evidence-checker.mjs",
+    "sample-requests/",
+    "mcp-server-config.json",
+    "README.md"
+  ]
+}

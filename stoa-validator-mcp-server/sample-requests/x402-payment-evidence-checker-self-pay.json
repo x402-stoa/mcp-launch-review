@@ -1,0 +1,39 @@
+{
+  "route": {
+    "method": "GET",
+    "resourceUrl": "https://temporary-demo.trycloudflare.com/v0/example-query",
+    "network": "eip155:8453",
+    "expectedAmountAtomic": "10000",
+    "requestSchemaValid": true,
+    "responseSchemaValid": true
+  },
+  "payment": {
+    "status": "settled",
+    "transactionHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+    "productOutputReturned": true,
+    "charged": true,
+    "payerExternal": false,
+    "selfPay": true,
+    "amountAtomic": "10000",
+    "maxAmountAtomic": "10000"
+  },
+  "balanceDelta": {
+    "status": "balance-delta-observed",
+    "buyerDeltaAtomic": "-10000"
+  },
+  "buyer": {
+    "name": "Internal test wallet",
+    "sourceOfFunds": "self-pay test funds",
+    "isSean": false
+  },
+  "logs": {
+    "redacted": true,
+    "rawPaymentHeaderPresent": false,
+    "rawAuthPresent": false,
+    "rawPrivateMaterialPresent": false
+  },
+  "rollbackObserved": true,
+  "claims": [
+    "Self-paid mechanics proof only."
+  ]
+}

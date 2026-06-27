@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "stoa-validator": {
+      "command": "node",
+      "args": [
+        "stoa-validator-mcp-server.mjs"
+      ]
+    }
+  }
+}

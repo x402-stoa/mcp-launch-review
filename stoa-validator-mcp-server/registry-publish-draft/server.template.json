@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.x402-stoa/stoa-validator-mcp-server",
+  "title": "Stoa Validator MCP Server",
+  "description": "MCP tools for validating MCP directory listings and x402 payment evidence without overclaiming demand, revenue, ranking, production readiness, or external income.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/x402-stoa/stoa-validator-mcp-server",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "stoa-validator-mcp-server",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

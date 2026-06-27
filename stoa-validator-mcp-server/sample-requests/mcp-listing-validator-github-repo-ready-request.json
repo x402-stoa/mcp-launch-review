@@ -1,0 +1,20 @@
+{
+  "name": "Stoa x402/MCP Launch Review",
+  "shortDescription": "Source-grounded launch review for x402, MCP, paid API, and agent-tool listings.",
+  "link": "https://github.com/x402-stoa/mcp-launch-review",
+  "category": "Development",
+  "contactEmail": "learnstoa@gmail.com",
+  "claims": [
+    "Source-grounded launch review for x402, MCP, paid API, and agent-tool builders.",
+    "Returns buyer-safe listing copy, a claim/evidence matrix, blocked claims, and first-call/payment-risk notes.",
+    "Uses public source material only."
+  ],
+  "publicPageQa": {
+    "pageStatus": 200,
+    "primaryAssetStatus": 200,
+    "jsonFormatStatus": 200,
+    "note": "Recommended listing link is the public GitHub repo. The GitHub Pages CTA fix was pushed and verified on 2026-06-26."
+  },
+  "paidBoost": false,
+  "premiumSubmit": false
+}
