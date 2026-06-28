@@ -2,7 +2,7 @@
   "name": "Stoa",
   "url": "https://stoa.tools/",
   "contact": "learnstoa@gmail.com",
-  "positioning": "Business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.",
+  "positioning": "Agent commerce infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.",
   "lanes": [
     {
       "name": "Builder onboarding and readiness",

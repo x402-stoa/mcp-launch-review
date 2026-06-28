@@ -1,13 +1,13 @@
 # Stoa
 
-> Stoa builds business infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.
+> Stoa is agent commerce infrastructure for agents and the humans who make services available to them. Stoa helps MCP, x402, paid API, and agent-tool teams prepare services for real agent commerce: clear listings, supported claims, payment evidence, and outputs agents can read.
 
 Canonical site: https://stoa.tools/
 Contact: learnstoa@gmail.com
 
 ## Core Pages
 
-- [Stoa](https://stoa.tools/): agent-commerce infrastructure for MCP servers, x402 paid APIs, and agent-tool launches.
+- [Stoa](https://stoa.tools/): agent commerce infrastructure for MCP servers, x402 paid APIs, and agent-tool launches.
 - [Agent-readable offers](https://stoa.tools/offers.json): machine-readable service catalog, deliverables, start instructions, and boundaries.
 - [Validator MCP Server Bundle](https://stoa.tools/stoa-validator-mcp-server/): public package for local MCP listing self-checks and x402 payment-evidence checking.
 - [Launch Review Skill Package](https://stoa.tools/stoa-x402-mcp-launch-review/): public self-check artifacts and examples.

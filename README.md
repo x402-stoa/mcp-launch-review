@@ -1,6 +1,6 @@
 # Stoa
 
-Public distribution repo for Stoa: business infrastructure for agents and the humans who make services available to them.
+Public distribution repo for Stoa: agent commerce infrastructure for agents and the humans who make services available to them.
 
 Stoa helps MCP servers, x402 paid APIs, paid API builders, and agent-tool teams prepare services for real agent commerce. Stoa checks listing readiness, supported claims, first-call risk, x402 payment evidence, and launch metadata so a service is easier for agents and buyers to understand, call, price, and pay for.
 
